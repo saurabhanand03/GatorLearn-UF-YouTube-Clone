@@ -47,7 +47,7 @@ export default function Channels() {
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faGamepad} />
         </div>
-        <p className="pr-2 text-sm">Physics</p>
+        <p className="pr-2 text-sm">Computer Science</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
@@ -75,14 +75,14 @@ export default function Channels() {
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faBook} />
         </div>
-        <p className="pr-2 text-sm">Learning</p>
+        <p className="pr-2 text-sm">History</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faShoppingBag} />
         </div>
-        <p className="pr-2 text-sm">Shopping</p>
+        <p className="pr-2 text-sm">Business</p>
       </div>
     </div>
   );

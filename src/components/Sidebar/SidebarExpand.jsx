@@ -29,16 +29,6 @@ export default function SidebarExpand() {
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faClapperboard} />
-          </div>
-          <p>Shorts</p>
-        </a>
-
-        <a
-          href="/"
-          className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
-        >
-          <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon className="text-lg" icon={faSquareCheck} />
           </div>
           <p>Subscriptions</p>
@@ -49,9 +39,19 @@ export default function SidebarExpand() {
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
+            <FontAwesomeIcon className="text-lg" icon={faClapperboard} />
+          </div>
+          <p>Questions</p>
+        </a>
+
+        <a
+          href="/"
+          className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
+        >
+          <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon className="text-lg" icon={faPhotoFilm} />
           </div>
-          <p>Library</p>
+          <p>Saved Videos</p>
         </a>
       </ul>
 
@@ -65,24 +65,24 @@ export default function SidebarExpand() {
 
         <div className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain">
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg text-redMain" icon={faPlay} />
-          </div>
-          <p>YT Premium</p>
-        </div>
-
-        <div className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain">
-          <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon
               className="text-lg text-redMain"
               icon={faCirclePlay}
             />
           </div>
-          <p>YT Music</p>
+          <p>Study Music</p>
         </div>
       </ul>
 
       <p className="p-2 text-sm opacity-80">
-        &copy; 2023 Youtube Redesign by Devsigner
+        &copy; Team 6:<br />
+        <div className="ml-2">
+          Anand Saurabh<br />
+          Huerta Cristian<br />
+          Rodriguez Devin<br />
+          Russell Torie<br />
+          Sardinia Nicholas
+        </div>
       </p>
     </div>
   );

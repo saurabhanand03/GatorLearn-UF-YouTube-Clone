@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import Searchbar from "./Searchbar";
 // import Logo from "../../assets/youtube_logo.svg";
-import Logo from "../../assets/gator_logo.png";
+import Logo from "../../assets/Florida_Gators_gator_logo.svg";
 import { toggleSidebar } from "../../app/slices/sidebarSlice";
 import NotificationBox from "./NotificationBox";
 

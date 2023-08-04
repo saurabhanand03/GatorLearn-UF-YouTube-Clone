@@ -5,7 +5,8 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 import Searchbar from "./Searchbar";
-import Logo from "../../assets/youtube_logo.svg";
+// import Logo from "../../assets/youtube_logo.svg";
+import Logo from "../../assets/gator_logo.png";
 import { toggleSidebar } from "../../app/slices/sidebarSlice";
 import NotificationBox from "./NotificationBox";
 
@@ -60,8 +61,7 @@ export default function Header() {
           </a>
 
           <a href="/" className="font-secondary text-2xl hover:opacity-80">
-            YouTube
-            <span className="ml-1 text-sm opacity-80">IN</span>
+            GatorLearn
           </a>
         </div>
 

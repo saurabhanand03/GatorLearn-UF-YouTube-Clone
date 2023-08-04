@@ -33,42 +33,42 @@ export default function Channels() {
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faMusic} />
         </div>
-        <p className="pr-2 text-sm">Music</p>
+        <p className="pr-2 text-sm">Chemistry</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faFilm} />
         </div>
-        <p className="pr-2 text-sm">Movies</p>
+        <p className="pr-2 text-sm">Math</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faGamepad} />
         </div>
-        <p className="pr-2 text-sm">Gaming</p>
+        <p className="pr-2 text-sm">Physics</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faBasketball} />
         </div>
-        <p className="pr-2 text-sm">Sports</p>
+        <p className="pr-2 text-sm">Biology</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faNewspaper} />
         </div>
-        <p className="pr-2 text-sm">News</p>
+        <p className="pr-2 text-sm">English</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faVest} />
         </div>
-        <p className="pr-2 text-sm">Fashion & Beauty</p>
+        <p className="pr-2 text-sm">History</p>
       </div>
 
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">

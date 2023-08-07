@@ -55,7 +55,7 @@ export default function Header() {
           <a href="/">
             <img
               className="w-8 hover:opacity-80"
-              alt="youtube logo"
+              alt="GatorLearn logo"
               src={Logo}
             />
           </a>

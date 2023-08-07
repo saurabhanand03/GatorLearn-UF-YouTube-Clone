@@ -6,6 +6,7 @@ import {
   faClapperboard,
   faPlay,
   faPhotoFilm,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -35,11 +36,11 @@ export default function SidebarExpand() {
         </a>
 
         <a
-          href="/"
+          href="/questions"
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faClapperboard} />
+            <FontAwesomeIcon className="text-lg" icon={faQuestionCircle} />
           </div>
           <p>Questions</p>
         </a>

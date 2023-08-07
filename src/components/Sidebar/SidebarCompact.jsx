@@ -3,6 +3,7 @@ import {
   faSquareCheck,
   faClapperboard,
   faPhotoFilm,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -24,16 +25,16 @@ export default function SidebarCompact() {
           className="mb-4 flex flex-col justify-center items-start border-b-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faClapperboard} />
+            <FontAwesomeIcon className="text-lg" icon={faSquareCheck} />
           </div>
         </a>
 
         <a
-          href="/"
+          href="/questions"
           className="mb-4 flex flex-col justify-center items-start border-b-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faSquareCheck} />
+            <FontAwesomeIcon className="text-lg" icon={faQuestionCircle} />
           </div>
         </a>
 

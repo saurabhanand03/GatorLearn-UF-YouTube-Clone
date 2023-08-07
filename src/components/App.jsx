@@ -8,6 +8,7 @@ import Error from "./Error/Error";
 import Live from "./Live/Live";
 import VideoShowcase from "./Body/Showcase/VideoShowcase";
 import SearchResults from "./Body/SearchResults/SearchResults";
+import Questions from "./Body/Questions/Questions";
 
 export default function App() {
   return (
@@ -46,5 +47,10 @@ const appRouter = createBrowserRouter([
     path: "/live",
     errorElement: <Error />,
     element: <Live />,
+  },
+  {
+    path: "/questions",
+    errorElement: <Error />,
+    element: <Questions />,
   },
 ]);

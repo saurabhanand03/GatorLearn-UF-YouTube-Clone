@@ -31,8 +31,32 @@ export default function Header() {
     setSidebarState(!sidebarState);
   };
 
+  const userTheme = localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const themeCheck = () => {
+    if(userTheme =='dark' || (!userTheme && systemTheme))
+    {
+      document.documentElement.classList.add("dark");
+    }
+  };
+  const handleThemeSwitch = () =>
+  {
+    if(document.documentElement.classList.contains("dark"))
+    {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme","light");
+      return;
+    }
+    document.documentElement.classList.add("dark")
+    localStorage.setItem("theme","dark");
+  };
+
+
+  themeCheck();
+
   return (
-    <div className="py-1 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
+    <div className="py-1 px-6 flex justify-between items-center gap-4 bg-blackMain dark:bg-darkMain sticky top-0 left-0 z-20">
       <div className="flex items-center gap-4">
         <div className="flex justify-center items-center gap-1">
           <button
@@ -57,6 +81,7 @@ export default function Header() {
               className="w-8 hover:opacity-80"
               alt="GatorLearn logo"
               src={Logo}
+             onClick={handleThemeSwitch}
             />
           </a>
 

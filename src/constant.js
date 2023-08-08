@@ -416,6 +416,186 @@ export const COMMENTS_DATA = [
   },
 ];
 
+//Generated using ChatGPT
+export const QUESTIONS_DATA = [
+  {
+    id: 1,
+    author: "AlexJohnson23",
+    question: "Could you provide additional examples of quadratic equations?",
+    videoId: 100,
+    answers: [
+      {
+        id: 101,
+        author: "MathTeacher101",
+        answer: "Absolutely! Let's go over a few more examples...",
+        postedAt: "5 minutes ago",
+      },
+      {
+        id: 102,
+        author: "MathPro202",
+        answer: "I'd be happy to help too. Here's another example...",
+        postedAt: "3 minutes ago",
+      },
+    ],
+    postedAt: "10 minutes ago",
+  },
+  {
+    id: 2,
+    author: "BioEnthusiast12",
+    question: "What is the significance of DNA replication in cell division?",
+    videoId: 200,
+    answers: [],
+    postedAt: "1 hour ago",
+  },
+  {
+    id: 3,
+    author: "CalculusWiz34",
+    question: "Can you help me understand the concept of limits?",
+    videoId: 300,
+    answers: [
+      {
+        id: 103,
+        author: "MathProf456",
+        answer: "Sure thing! Let's break it down step by step...",
+        postedAt: "30 minutes ago",
+      },
+    ],
+    postedAt: "2 hours ago",
+  },
+  {
+    id: 4,
+    author: "HistoryExplorer",
+    question: "What were the primary causes of the American Civil War?",
+    videoId: 400,
+    answers: [],
+    postedAt: "3 hours ago",
+  },
+  {
+    id: 5,
+    author: "LanguageLearner",
+    question: "Could you clarify the usage of 'its' and 'it's' in sentences?",
+    videoId: 500,
+    answers: [
+      {
+        id: 104,
+        author: "EnglishLanguagePro",
+        answer: "Certainly! 'Its' is a possessive pronoun...",
+        postedAt: "1 hour ago",
+      },
+    ],
+    postedAt: "4 hours ago",
+  },
+  {
+    id: 6,
+    author: "MathGeek87",
+    question: "What are some common strategies for solving trigonometric equations?",
+    videoId: 600,
+    answers: [
+      {
+        id: 105,
+        author: "TrigExpert202",
+        answer: "Great question! One common strategy is...",
+        postedAt: "2 hours ago",
+      },
+      {
+        id: 106,
+        author: "MathGeek87",
+        answer: "Thanks for the explanation! Could you also...",
+        postedAt: "1 hour ago",
+      },
+      {
+        id: 107,
+        author: "TrigExpert202",
+        answer: "You're welcome! I'd be happy to help with that...",
+        postedAt: "30 minutes ago",
+      },
+    ],
+    postedAt: "3 hours ago",
+  },
+  {
+    id: 7,
+    author: "ScienceNerd101",
+    question: "What is the process of photosynthesis and its importance?",
+    videoId: 700,
+    answers: [
+      {
+        id: 108,
+        author: "BiologyTeacher99",
+        answer: "Photosynthesis is a complex process...",
+        postedAt: "5 hours ago",
+      },
+      {
+        id: 109,
+        author: "NatureLover77",
+        answer: "Thank you for the detailed explanation! I've always...",
+        postedAt: "4 hours ago",
+      },
+      {
+        id: 110,
+        author: "BiologyTeacher99",
+        answer: "You're welcome! It's fascinating how...",
+        postedAt: "3 hours ago",
+      },
+    ],
+    postedAt: "6 hours ago",
+  },
+  {
+    id: 8,
+    author: "ArtEnthusiast",
+    question: "How do colors and composition contribute to visual storytelling?",
+    videoId: 800,
+    answers: [
+      {
+        id: 111,
+        author: "ArtTeacher123",
+        answer: "Colors and composition play a crucial role in...",
+        postedAt: "7 hours ago",
+      },
+      {
+        id: 112,
+        author: "VisualStoryteller",
+        answer: "Thanks for the insight! Could you also share...",
+        postedAt: "6 hours ago",
+      },
+      {
+        id: 113,
+        author: "ArtTeacher123",
+        answer: "Certainly! Visual storytelling involves...",
+        postedAt: "5 hours ago",
+      },
+    ],
+    postedAt: "8 hours ago",
+  },
+  {
+    id: 9,
+    author: "LanguageLover",
+    question: "How can I improve my vocabulary and language skills?",
+    videoId: 900,
+    answers: [
+      {
+        id: 114,
+        author: "LanguageExpert202",
+        answer: "Improving your vocabulary and language skills...",
+        postedAt: "9 hours ago",
+      },
+      {
+        id: 115,
+        author: "WordEnthusiast",
+        answer: "Thank you for the tips! I've been trying to...",
+        postedAt: "8 hours ago",
+      },
+      {
+        id: 116,
+        author: "LanguageExpert202",
+        answer: "You're welcome! One effective way is to...",
+        postedAt: "7 hours ago",
+      },
+    ],
+    postedAt: "10 hours ago",
+  },
+  // ... More questions can be added here
+];
+
 export const CHAT_DATA = [
   {
     id: "",

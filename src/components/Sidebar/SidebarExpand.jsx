@@ -6,6 +6,7 @@ import {
   faClapperboard,
   faPlay,
   faPhotoFilm,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -35,11 +36,11 @@ export default function SidebarExpand() {
         </a>
 
         <a
-          href="/"
+          href="/questions"
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faClapperboard} />
+            <FontAwesomeIcon className="text-lg" icon={faQuestionCircle} />
           </div>
           <p>Questions</p>
         </a>
@@ -75,15 +76,23 @@ export default function SidebarExpand() {
       </ul>
 
       <p className="p-2 text-sm opacity-80">
-        &copy; Team 6:<br />
+        Team 6:<br />
         <div className="ml-2">
-          Anand Saurabh<br />
-          Huerta Cristian<br />
-          Rodriguez Devin<br />
-          Russell Torie<br />
-          Sardinia Nicholas
+          Saurabh Anand<br />
+          Cristian Huerta<br />
+          Devin Rodriguez<br />
+          Torie Russell<br />
+          Nicholas Sardinia
         </div>
       </p>
+
+      <p className="p-2 text-sm opacity-40">
+        <a href="https://github.com/piyush2108/youtube-clone" target="_blank" className="">
+          Adapted from <br />
+          &copy; 2023 Devsigner
+        </a>
+      </p>
+
     </div>
   );
 }

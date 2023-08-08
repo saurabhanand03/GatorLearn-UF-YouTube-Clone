@@ -33,6 +33,7 @@ export default function Header() {
 
   return (
     <div className="py-1 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
+       
       <div className="flex items-center gap-4">
         <div className="flex justify-center items-center gap-1">
           <button
@@ -95,7 +96,7 @@ export default function Header() {
         </div>
 
         <div className="h-10 w-10 p-1 flex justify-center items-center rounded-full border-[1px] border-transparent hover:border-redMain">
-          <FontAwesomeIcon className="text-xl" icon={faUser} />
+         <FontAwesomeIcon className="text-xl" icon={faUser} /> 
         </div>
       </div>
     </div>

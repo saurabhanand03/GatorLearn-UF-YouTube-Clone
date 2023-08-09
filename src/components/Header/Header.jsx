@@ -34,23 +34,32 @@ export default function Header() {
 
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [darkMode, setDarkMode] = useState(systemTheme);
+  const root = document.documentElement;
 
   const themeCheck = () => {
-    if(userTheme =='dark' || (!userTheme && systemTheme))
-    {
-      document.documentElement.classList.add("dark");
+    if(userTheme =='dark' || (!userTheme && systemTheme)) {
+      root.classList.add("dark");
     }
   };
+
   const handleThemeSwitch = () =>
   {
-    if(document.documentElement.classList.contains("dark"))
+    setDarkMode(!darkMode);
+    if(root.classList.contains("dark"))
     {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark");
+      root.style.setProperty("--redMain", "#e7890e"); // Light mode redMain color
+      // root.style.setProperty("--blackMain", "#e7890e"); // Light mode blackMain color
       localStorage.setItem("theme","light");
       return;
+    } else {
+      root.classList.add("dark");
+      root.style.setProperty("--redMain", "#8383fc"); // Dark mode redMain color
+      // root.style.setProperty("--blackMain", "#8383fc"); // Dark mode blackMain color
+      localStorage.setItem("theme","dark");
+      return;
     }
-    document.documentElement.classList.add("dark")
-    localStorage.setItem("theme","dark");
   };
 
 
@@ -77,17 +86,18 @@ export default function Header() {
             )}
           </button>
 
-          <a href="/">
+          <a>
             <img
+              onClick={handleThemeSwitch}
               className="w-8 hover:opacity-80"
               alt="GatorLearn logo"
               src={Logo}
-             onClick={handleThemeSwitch}
             />
           </a>
 
-          <a href="/" className="font-secondary text-2xl hover:opacity-80">
+          <a onClick={handleThemeSwitch} className="font-secondary text-2xl hover:opacity-80 select-none">
             GatorLearn
+            <sup className="text-sm opacity-80">{darkMode ? "Study" : "Learn"}</sup>
           </a>
         </div>
 

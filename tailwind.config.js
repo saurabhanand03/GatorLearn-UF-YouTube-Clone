@@ -9,9 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        blackMain: "#e7890e",
+        blackMain: "var(--blackMain, #e7890e)",
         darkMain: "#8383fc",
-        redMain: "#100202",
+        redMain: "var(--redMain, #e7890e)",
         blackSecondary: "#282828",
       },
       fontFamily: {

@@ -120,7 +120,7 @@ export default function Header() {
         </div>
 
         <div className="h-10 w-10 p-1 flex justify-center items-center rounded-full border-[1px] border-transparent hover:border-redMain">
-          <FontAwesomeIcon className="text-xl" icon={faUser} />
+         <FontAwesomeIcon className="text-xl" icon={faUser} /> 
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 export const API_KEY = "AIzaSyCZxpmXTY1LWMyMMPfGUHWX-kpeHXj5fGY";
 
+export const GPT_API_KEY = "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";
+
 export const VIDEO_LIST_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=45&regionCode=IN&key=";
 

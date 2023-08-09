@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-import { QUESTIONS_DATA } from "../../../constant";
+import { QUESTIONS_DATA, GPT_API_KEY } from "../../../constant";
 
 const QuestionItem = ({ info }) => {
   const [answerVisibility, setAnswerVisibility] = useState(false);
 
   return (
     <div className="p-2 flex items-start gap-2 cursor-default">
-      <h1 className="h-8 w-8 flex justify-center items-center border-2 border-blue-600 rounded-full">
+      <h1 className="h-8 w-8 flex justify-center items-center border-2 border-redMain rounded-full">
         {info?.author.slice(0, 1)}
       </h1>
 
@@ -18,6 +18,8 @@ const QuestionItem = ({ info }) => {
           @{info?.author}
           <span className="px-2 text-xs opacity-80">{info?.postedAt}</span>
         </p>
+
+        <p className="py-1 break-all">{info?.question}</p>
 
         {info.answers.length > 0 && (
           <p
@@ -33,8 +35,6 @@ const QuestionItem = ({ info }) => {
             />
           </p>
         )}
-
-        <p className="py-1 break-all">{info?.question}</p>
 
         <div className="border-l-2 border-blackSecondary">
           {answerVisibility &&
@@ -52,7 +52,7 @@ const AnswerItem = ({ info }) => {
 
   return (
     <div className="p-2 flex items-start gap-2 cursor-default">
-      <h1 className="h-8 w-8 flex justify-center items-center border-2 border-blue-600 rounded-full">
+      <h1 className="h-8 w-8 flex justify-center items-center border-2 border-redMain rounded-full">
         {info?.author.slice(0, 1)}
       </h1>
 
@@ -79,7 +79,7 @@ export default function QuestionsBox() {
     setQuestions(QUESTIONS_DATA);
   };
 
-  const addQuestion = () => {
+  const addQuestion = async () => {
     const questionInfo = {
       id: Math.floor(Math.random() * (200 - 150 + 1) + 150),
       author: "BingBong",
@@ -90,6 +90,54 @@ export default function QuestionsBox() {
 
     questions.unshift(questionInfo);
     setQuestionText("");
+    console.log(questions);
+
+    const chatGPTAnswer = await processMessageToChatGPT(questionText);
+
+    const answerInfo = {
+      id: Math.floor(Math.random() * (200 - 150 + 1) + 150),
+      author: "ChatGPT",
+      answer: chatGPTAnswer,
+      postedAt: "Now",
+    };
+
+    questions[0].answers.push(answerInfo);
+    console.log(questions);
+    setQuestions(questions);
+    console.log(questions);
+  };
+
+  async function processMessageToChatGPT(questionText) {
+
+    const systemMessage = {
+      "role": "system",
+      "content": "Speak like a college professor. Explain all concepts in the simplest way possible. Keep your answer to one or two sentences.",
+    }
+
+    const userQuestion = {
+      role: "user",
+      content: questionText,
+    }
+
+    const apiRequestBody = {
+      "model": "gpt-3.5-turbo",
+      "messages": [systemMessage, userQuestion]
+    }
+
+    return fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + GPT_API_KEY,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(apiRequestBody),
+    })
+    .then((data) => data.json())
+    .then((data) => {
+      console.log(data);
+      console.log(data.choices[0].message.content);
+      return data.choices[0].message.content;
+    });
   };
 
   return (
@@ -106,7 +154,7 @@ export default function QuestionsBox() {
           <input
             className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-0"
             type="text"
-            placeholder="Add a question"
+            placeholder="Ask a question"
             value={questionText}
             onChange={(e) => setQuestionText(e.target.value)}
           />

@@ -32,13 +32,13 @@
     font-size: 1rem;
     font-family: inherit;
     cursor: pointer;
-    background-color: rgb(86, 135, 86);
     outline: 0;
     border: 2px solid transparent;
 }
+
 .loginButton:hover{
-    border: 2px solid rgb(86, 135, 86);
-    background-color: darkolivegreen;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: black;
 }
 
 .link_container{
@@ -60,6 +60,7 @@
     font-size: 0.85rem;
     margin: 0;
 }
+
 
 @media only screen and (max-height: 620px){
     .inputs_container{

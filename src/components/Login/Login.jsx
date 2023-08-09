@@ -7,9 +7,9 @@ export default function Login(){
 return ( 
     <Card>
         <h1 className = "title">Log In</h1>
-        <p className = "subtitle">Please Log In</p>
+        <p className = "subtitle ">Please Log In</p>
         <form>
-            <div className="inputs_container">
+            <div className="inputs_container "  >
                 <input 
                 type="text" 
                 placeholder="Username" 
@@ -21,7 +21,7 @@ return (
                 /> 
             </div>       
          
-            <div className="loginButton">
+            <div className="loginButton  bg-blackMain dark:bg-darkMain ">
             <button>
                 <a href="/" className="small">
                 Login
@@ -30,9 +30,9 @@ return (
             </div>
            
         </form>
-        <div className="link_container">
+        <div className="link_container  ">
             <a href="" className="small">
-                Forgort Password?
+                Forgot Password?
             </a>
         </div>    
     </Card>

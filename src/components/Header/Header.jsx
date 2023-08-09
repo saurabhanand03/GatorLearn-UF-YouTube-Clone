@@ -9,6 +9,7 @@ import Searchbar from "./Searchbar";
 import Logo from "../../assets/Florida_Gators_gator_logo.svg";
 import { toggleSidebar } from "../../app/slices/sidebarSlice";
 import NotificationBox from "./NotificationBox";
+import { Link, Navigate } from "react-router-dom";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -120,7 +121,9 @@ export default function Header() {
         </div>
 
         <div className="h-10 w-10 p-1 flex justify-center items-center rounded-full border-[1px] border-transparent hover:border-redMain">
-         <FontAwesomeIcon className="text-xl" icon={faUser} /> 
+         <a href='/login'>
+          <FontAwesomeIcon className="text-xl" icon={faUser}/>
+        </a>
         </div>
       </div>
     </div>

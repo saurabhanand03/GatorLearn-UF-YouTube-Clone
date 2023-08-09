@@ -6,6 +6,7 @@ import Body from "./Body/Body";
 import Home from "./Body/Home";
 import Error from "./Error/Error";
 import Live from "./Live/Live";
+import Login from "./Login/Login"
 import VideoShowcase from "./Body/Showcase/VideoShowcase";
 import SearchResults from "./Body/SearchResults/SearchResults";
 import Questions from "./Body/Questions/Questions";
@@ -52,6 +53,11 @@ const appRouter = createBrowserRouter([
       path: "/questions",
       errorElement: <Error />,
       element: <Questions />,
+    },
+    {
+      path: "/login",
+      errorElement: <Error />,
+      element: <Login />,
     },
   ]);
   

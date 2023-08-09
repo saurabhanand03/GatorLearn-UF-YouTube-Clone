@@ -75,16 +75,16 @@ export default function SidebarExpand() {
         </div>
       </ul>
 
-      <p className="p-2 text-sm opacity-80">
-        Team 6:<br />
+      <div className="p-2 text-sm opacity-80">
+        <p>Team 6:</p>
         <div className="ml-2">
-          Saurabh Anand<br />
-          Cristian Huerta<br />
-          Devin Rodriguez<br />
-          Torie Russell<br />
-          Nicholas Sardinia
+          <p>Saurabh Anand</p>
+          <p>Cristian Huerta</p>
+          <p>Devin Rodriguez</p>
+          <p>Torie Russell</p>
+          <p>Nicholas Sardinia</p>
         </div>
-      </p>
+      </div>
 
       <p className="p-2 text-sm opacity-40">
         <a href="https://github.com/piyush2108/youtube-clone" target="_blank" className="">

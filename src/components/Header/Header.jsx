@@ -34,7 +34,7 @@ export default function Header() {
 
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [darkMode, setDarkMode] = useState(systemTheme);
+  const [focusMode, setFocusMode] = useState(systemTheme);
   const root = document.documentElement;
 
   const themeCheck = () => {
@@ -45,7 +45,7 @@ export default function Header() {
 
   const handleThemeSwitch = () =>
   {
-    setDarkMode(!darkMode);
+    setFocusMode(!focusMode);
     if(root.classList.contains("dark"))
     {
       root.classList.remove("dark");
@@ -95,9 +95,9 @@ export default function Header() {
             />
           </a>
 
-          <a onClick={handleThemeSwitch} className="font-secondary text-2xl hover:opacity-80 select-none">
+          <a onClick={handleThemeSwitch} className="font-secondary text-2xl hover:opacity-80 select-none w-32">
             GatorLearn
-            <sup className="text-sm opacity-80">{darkMode ? "Study" : "Learn"}</sup>
+            <sup className="text-sm opacity-80">{focusMode ? "Focus" : "Explore"}</sup>
           </a>
         </div>
 

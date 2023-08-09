@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
-import { QUESTIONS_DATA, GPT_API_KEY } from "../../../constant";
+import { QUESTIONS_DATA } from "../../../constant";
 
 const QuestionItem = ({ info }) => {
   const [answerVisibility, setAnswerVisibility] = useState(false);
@@ -70,6 +69,8 @@ const AnswerItem = ({ info }) => {
 export default function QuestionsBox() {
   const [questionText, setQuestionText] = useState("");
   const [questions, setQuestions] = useState([]);
+  const [gptReply, setGptReply] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getQuestionsData();
@@ -90,7 +91,6 @@ export default function QuestionsBox() {
 
     questions.unshift(questionInfo);
     setQuestionText("");
-    console.log(questions);
 
     const chatGPTAnswer = await processMessageToChatGPT(questionText);
 
@@ -102,16 +102,13 @@ export default function QuestionsBox() {
     };
 
     questions[0].answers.push(answerInfo);
-    console.log(questions);
-    setQuestions(questions);
-    console.log(questions);
   };
 
   async function processMessageToChatGPT(questionText) {
 
     const systemMessage = {
       "role": "system",
-      "content": "Speak like a college professor. Explain all concepts in the simplest way possible. Keep your answer to one or two sentences.",
+      "content": "Explain all concepts in the simplest way possible. Keep your answer to one or two sentences.",
     }
 
     const userQuestion = {
@@ -127,15 +124,13 @@ export default function QuestionsBox() {
     return fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + GPT_API_KEY,
+        Authorization: "Bearer " + import.meta.env.VITE_OPENAI_API_KEY,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
     })
     .then((data) => data.json())
     .then((data) => {
-      console.log(data);
-      console.log(data.choices[0].message.content);
       return data.choices[0].message.content;
     });
   };

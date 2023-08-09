@@ -74,7 +74,7 @@ export default function QuestionsBox() {
 
   useEffect(() => {
     getQuestionsData();
-  }, []);
+  }, [questions]);
 
   const getQuestionsData = () => {
     setQuestions(QUESTIONS_DATA);
@@ -101,7 +101,9 @@ export default function QuestionsBox() {
       postedAt: "Now",
     };
 
-    questions[0].answers.push(answerInfo);
+    let newQuestions = [...questions];
+    newQuestions[0].answers.unshift(answerInfo);
+    setQuestions(newQuestions);
   };
 
   async function processMessageToChatGPT(questionText) {

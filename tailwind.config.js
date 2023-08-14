@@ -11,7 +11,7 @@ export default {
       colors: {
         blackMain: "var(--blackMain, #e7890e)",
         darkMain: "#8383fc",
-        redMain: "var(--redMain, #e7890e)",
+        redMain: "var(--redMain, #8383fc)",
         blackSecondary: "#282828",
       },
       fontFamily: {

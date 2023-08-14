@@ -48,15 +48,17 @@ export default function Header() {
     setFocusMode(!focusMode);
     if(root.classList.contains("dark"))
     {
+      // Explore
       root.classList.remove("dark");
-      root.style.setProperty("--redMain", "#e7890e"); // Light mode redMain color
-      // root.style.setProperty("--blackMain", "#e7890e"); // Light mode blackMain color
+      root.style.setProperty("--redMain", "#e7890e"); // Light mode redMain color (Orange)
+      // root.style.setProperty("--blackMain", "#e7890e"); // Light mode blackMain color (Orange)
       localStorage.setItem("theme","light");
       return;
     } else {
+      // Focus
       root.classList.add("dark");
-      root.style.setProperty("--redMain", "#8383fc"); // Dark mode redMain color
-      // root.style.setProperty("--blackMain", "#8383fc"); // Dark mode blackMain color
+      root.style.setProperty("--redMain", "#8383fc"); // Dark mode redMain color (Blue)
+      // root.style.setProperty("--blackMain", "#8383fc"); // Dark mode blackMain color (Blue)
       localStorage.setItem("theme","dark");
       return;
     }
@@ -75,12 +77,12 @@ export default function Header() {
           >
             {sidebarState ? (
               <FontAwesomeIcon
-                className="p-2 text-lg group-hover:text-redMain"
+                className="p-2 text-lg group-hover:opacity-80"
                 icon={faBars}
               />
             ) : (
               <FontAwesomeIcon
-                className="p-2 text-lg opacity-80 group-hover:text-redMain"
+                className="p-2 text-lg group-hover:opacity-80"
                 icon={faBars}
               />
             )}

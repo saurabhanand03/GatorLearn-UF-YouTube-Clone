@@ -1,7 +1,7 @@
 export const API_KEY = "AIzaSyCZxpmXTY1LWMyMMPfGUHWX-kpeHXj5fGY";
 
 export const VIDEO_LIST_API =
-  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=45&regionCode=IN&key=";
+  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=45&regionCode=US&key=";
 
 export const VIDEO_PLAY_API = "https://www.youtube.com/watch?v=";
 
